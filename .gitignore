@@ -1,0 +1,10 @@
+# entorno virtual
+venv/
+
+# database
+instance/
+*.db
+
+# cache python
+__pycache__/
+*.pyc
