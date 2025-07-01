@@ -1,6 +1,6 @@
 # entorno virtual
 venv/
-
+.env
 # database
 instance/
 *.db
