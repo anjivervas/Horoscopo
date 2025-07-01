@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from typing import Opcional
+from typing import Optional
 from app.core.signos import Signos
 
 class Horoscopo:
@@ -24,8 +24,7 @@ class Horoscopo:
 
     def _get_sign_description(self) -> Optional[str]:
         """Obtiene la descripción del signo"""
-        
-         try:
+        try:
             # Busca el div que contiene la descripción en el objeto soup
             description = self.soup.find("div", {"class": "description"})
             # Convierte la descripción a texto
@@ -38,8 +37,8 @@ class Horoscopo:
     def _get_sign_prediction(self) -> Optional[str]:
         """Obtiene la predicción del signo"""
 
-       if not self.soup:
-            return "Predicción no disponible"
+       #if not self.soup:
+        #    return "Predicción no disponible"
 
         try:
             # Obtiene todos los div que contiene la clase "descripción" (hay dos en la página)
