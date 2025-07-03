@@ -2,7 +2,7 @@ from telegram.ext import Application, CommandHandler
 
 from app.settings import Config
 from app.app_log import get_logger
-from app.bot.commands import start
+from app.bot.commands import start, aries, tauro, geminis, cancer, leo, virgo, libra, escorpio, capricornio, sagitario, acuario, piscis
 
 logger = get_logger(f"[{Config().APP_NAME}]")
 
@@ -28,6 +28,18 @@ def main():
 
     # Handlers
     application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("aries", aries))
+    application.add_handler(CommandHandler("tauro", tauro))
+    application.add_handler(CommandHandler("geminis", geminis))
+    application.add_handler(CommandHandler("cancer", cancer))
+    application.add_handler(CommandHandler("leo", leo))
+    application.add_handler(CommandHandler("virgo", virgo))
+    application.add_handler(CommandHandler("libra", libra))
+    application.add_handler(CommandHandler("escorpio", escorpio))
+    application.add_handler(CommandHandler("sagitario", sagitario))
+    application.add_handler(CommandHandler("capricornio", capricornio))
+    application.add_handler(CommandHandler("acuario", acuario))
+    application.add_handler(CommandHandler("piscis", piscis))
     
     try:
         application.run_polling()

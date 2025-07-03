@@ -51,6 +51,14 @@ class Horoscopo:
             print("Error al obtener la predicción del signo.")
             return None
 
+    def to_ditc(self):
+        result = {
+            "signo": self.signo,
+            "prediccion": self.prediction,
+            "descripcion": self.description
+        }
+        return result
+
 if __name__ == "__main__":
     prediccion = Horoscopo(Signos.ARIES.signo())
     print(prediccion.prediction)
