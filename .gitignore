@@ -8,3 +8,7 @@ instance/
 # cache python
 __pycache__/
 *.pyc
+
+# logs
+logs/
+*.log
