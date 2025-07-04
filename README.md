@@ -88,31 +88,21 @@ pip install -r requirements.txt
 
 Una vez que el bot esté en funcionamiento, puedes interactuar con él en Telegram usando los siguientes comandos:
 
-- /start: Inicia la conversación con el bot y recibe un mensaje de bienvenida.
-
-- /aries: Obtiene la predicción del horóscopo para Aries.
-
-- /tauro: Obtiene la predicción del horóscopo para Tauro.
-
-- /geminis: Obtiene la predicción del horóscopo para Géminis.
-
-- /cancer: Obtiene la predicción del horóscopo para Cáncer.
-
-- /leo: Obtiene la predicción del horóscopo para Leo.
-
-- /virgo: Obtiene la predicción del horóscopo para Virgo.
-
-- /libra: Obtiene la predicción del horóscopo para Libra.
-
-- /escorpio: Obtiene la predicción del horóscopo para Escorpio.
-
-- /sagitario: Obtiene la predicción del horóscopo para Sagitario.
-
-- /capricornio: Obtiene la predicción del horóscopo para Capricornio.
-
-- /acuario: Obtiene la predicción del horóscopo para Acuario.
-
-- /piscis: Obtiene la predicción del horóscopo para Piscis.
+| signos               | comandos    | Descripción                                                                |
+|----------------------|-------------|----------------------------------------------------------------------------|
+| start                | /start      | Inicia la conversación con el bot y recibe un mensaje de bienvenida.       |
+| aries                | /aries      | BObtiene la predicción del horóscopo para Aries.                           |
+| tauro                | /tauro      | Obtiene la predicción del horóscopo para Tauro.                            |
+| geminis              | /geminis    | Obtiene la predicción del horóscopo para Géminis.                          |
+| cancer               | /cancer     | Obtiene la predicción del horóscopo para Cáncer.                           |
+| leo                  | /leo        | Obtiene la predicción del horóscopo para Leo.                              |
+| virgo                | /virgo      | Obtiene la predicción del horóscopo para Virgo.                            |
+| libra                | /libra      | Obtiene la predicción del horóscopo para Libra.                            |
+| escorpio             | /escorpio   | Obtiene la predicción del horóscopo para Escorpio.                         |
+| sagitario            | /sagitario  | Obtiene la predicción del horóscopo para Sagitario.                        |
+| capricornio          | /capricornio| Obtiene la predicción del horóscopo para Capricornio.                      |
+| acuario              | /acuario    | Obtiene la predicción del horóscopo para Acuario.                          |
+| piscis               | /piscis     | Obtiene la predicción del horóscopo para Piscis.                           |
 
 
 ## 💬 Ejemplo de Uso
