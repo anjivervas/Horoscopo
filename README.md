@@ -91,7 +91,7 @@ Una vez que el bot esté en funcionamiento, puedes interactuar con él en Telegr
 | signos               | comandos    | Descripción                                                                |
 |----------------------|-------------|----------------------------------------------------------------------------|
 | start                | /start      | Inicia la conversación con el bot y recibe un mensaje de bienvenida.       |
-| aries                | /aries      | BObtiene la predicción del horóscopo para Aries.                           |
+| aries                | /aries      | Obtiene la predicción del horóscopo para Aries.                            |
 | tauro                | /tauro      | Obtiene la predicción del horóscopo para Tauro.                            |
 | geminis              | /geminis    | Obtiene la predicción del horóscopo para Géminis.                          |
 | cancer               | /cancer     | Obtiene la predicción del horóscopo para Cáncer.                           |
@@ -156,4 +156,4 @@ Cuando envías un comando de signo zodiacal, el bot te devolverá un mensaje de 
 
 ## 📄 Licencia
 
-MIT © [anjivervas](https://github.com/anjivervas/Horoscopo)
+MIT © [anjivervas](https://github.com/anjivervas)
