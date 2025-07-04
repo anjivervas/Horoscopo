@@ -1,4 +1,8 @@
 # 🔮 HoróscopoBot
+![Python](https://img.shields.io/badge/Python-3.11%252B-blue?logo=python&logoColor=white)
+![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?logo=telegram)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Code Style](https://img.shields.io/badge/code%2520style-black-000000.svg)
 
 > Bienvenido al repositorio de HoróscopoBot, un bot de Telegram diseñado para ofrecerte las predicciones diarias de tu signo zodiacal.
 
@@ -66,7 +70,7 @@ pip install -r requirements.txt
 - pip install -r requirements.txt
 ```
 
-⚠️ Crea un archivo .env en la raíz del proyecto (al mismo nivel que run.py). Este archivo contendrá tus variables de entorno. Puedes usar el archivo .env.example como plantilla.
+> ⚠️ Crea un archivo .env en la raíz del proyecto (al mismo nivel que run.py). Este archivo contendrá tus variables de entorno. Puedes usar el archivo .env.example como plantilla. ASEGURATE DE NO COMPARTIR EL TOKEN DE TELEGRAM.
 
 1. `TELEGRAM_BOT_KEY="TU_TOKEN_DE_TELEGRAM_AQUI"`
 2. `LOG_LEVEL="INFO" # Puedes cambiar a DEBUG, WARNING, ERROR`
@@ -124,7 +128,32 @@ Para obtener tu horóscopo, simplemente abre un chat con el bot en Telegram y en
 ```
 
 
-## 📊 Estructura de Salida
+## 📂 Estructura del proyecto
+```
+proyecto_app/
+├── app/                    # Contiene el codigo fuente
+│   ├── app_log/            # Modulo para la configuración y gestión logging
+│   │   ├── __init__.py     # permite importar sus módulos
+│   │   ├── log_config.py   # atchivos y controladores
+│   │   └── logger.py       # obtiene instancias de logger
+│   ├── bot/                # logica central del bot de telegram
+│   │   ├── __init__.py     # exporta la función principal del bot
+│   │   ├── bot             # configura los manejadores de comandos y lo pone en funcionamiento
+│   │   └── commands/       # contiene los manejos de comandos de cada signo
+│   ├── core/               # contiene la logica principal
+│   │   ├── __init__.py     # exporta las clases Horoscopo y signos
+│   │   ├── anjiscrap.py    # define la clase horoscopo y conecta con 20minutos.es para extraer las predicciones
+│   │   └── signos.py       # define una enumeración
+│   ├── settings/           # modulo para la gestión de configuración
+│   │   ├── __init__.py     # esporta la clse config
+│   │   └── config          # contiene las variable config
+│   └── __init__.py         # impota el modulo de nivel superior (bot) para run.py
+├── .env                    # almacena las variables de entorno sesibles
+├── .gitignore              # especifica que archivo/carpeta deben ser ignorados 
+├── README                  # archivo de documentación
+├── requirements            # lista de las dependencias de python
+├── run.py                  # script principal para la ejcución del bot
+```
 
 Cuando envías un comando de signo zodiacal, el bot te devolverá un mensaje de texto con la predicción del horóscopo obtenida de la fuente externa. 
 
@@ -133,3 +162,8 @@ Cuando envías un comando de signo zodiacal, el bot te devolverá un mensaje de 
 🏁 *¡Espero que disfrutes usando HoróscopoBot!* 
 
 ***¡Que los astros te sean favorables!**
+
+
+## 📄 Licencia
+
+MIT © [anjivervas](https://github.com/anjivervas/Horoscopo)
