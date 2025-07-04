@@ -1,10 +1,9 @@
-from app import create_app
-from waitress import serve
+from app import main
+from app.app_log import LoggerConfig
 
-app = create_app()
+LoggerConfig().setup_logging()
+
 
 if __name__ == "__main__":
-    app.run(debug=True)
-    print("Servidor desde waitress en port 5000")
-    #serve(app, port=5000)
+    main()
     
