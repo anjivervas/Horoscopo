@@ -19,12 +19,12 @@ Este bot se conecta a una fuente externa (20minutos.es) para obtener la informac
 
 ### 📋 Requisitos
 
-> ⚠️ Para ejecutar HoróscopoBot, necesitarás lo siguiente:
+> Para ejecutar HoróscopoBot, necesitarás lo siguiente:
 
 - Python 3.8+
 - Un token de bot de Telegram (obtenido de BotFather)
 
-* Las dependencias de Python listadas en requirements.txt:
+> Las dependencias de Python listadas en requirements.txt:
 
 - python-telegram-bot
 - requests
@@ -42,8 +42,6 @@ python -m venv venv
 
 # En Windows:
 .\venv\Scripts\activate
-# En macOS/Linux:
-source venv/bin/activate
 
 # Instala las dependencias del proyecto:
 pip install -r requirements.txt
@@ -53,27 +51,28 @@ pip install -r requirements.txt
 ## ⚙️ Configuración
 
 
-* Sigue estos pasos para configurar y poner en marcha el bot:
+#### Sigue estos pasos para configurar y poner en marcha el bot:
 
-Clona el repositorio (o descarga los archivos del proyecto).
+- Clona el repositorio (o descarga los archivos del proyecto).
 
-* Crea un entorno virtual (recomendado) e instálalo:
-
-python -m venv venv
+#### Crea un entorno virtual (recomendado) e instálalo:
+```bash
+- python -m venv venv
 ###### En Windows:
 .\venv\Scripts\activate
 
-* Instala las dependencias del proyecto:
+#### Instala las dependencias del proyecto:
 
-* pip install -r requirements.txt
+- pip install -r requirements.txt
+```
 
 ⚠️ Crea un archivo .env en la raíz del proyecto (al mismo nivel que run.py). Este archivo contendrá tus variables de entorno. Puedes usar el archivo .env.example como plantilla.
 
-`TELEGRAM_BOT_KEY="TU_TOKEN_DE_TELEGRAM_AQUI"`
-`LOG_LEVEL="INFO" # Puedes cambiar a DEBUG, WARNING, ERROR`
-`URL_BASE="https://www.20minutos.es/horoscopo/"`
-`APP_NAME="HoroscopoBot"`
-`AUTHOR_NAME="Anjiver"`
+1. `TELEGRAM_BOT_KEY="TU_TOKEN_DE_TELEGRAM_AQUI"`
+2. `LOG_LEVEL="INFO" # Puedes cambiar a DEBUG, WARNING, ERROR`
+3. `URL_BASE="https://www.20minutos.es/horoscopo/"`
+4. `APP_NAME="HoroscopoBot"`
+5. `AUTHOR_NAME="Anjiver"`
 
 - Reemplaza "TU_TOKEN_DE_TELEGRAM_AQUI" con el token que te proporcionó BotFather.
 
@@ -89,7 +88,7 @@ Una vez que el bot esté en funcionamiento, puedes interactuar con él en Telegr
 
 - /aries: Obtiene la predicción del horóscopo para Aries.
 
-/tauro: Obtiene la predicción del horóscopo para Tauro.
+- /tauro: Obtiene la predicción del horóscopo para Tauro.
 
 - /geminis: Obtiene la predicción del horóscopo para Géminis.
 
