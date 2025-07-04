@@ -1,7 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 from typing import Optional
+
 from app.core.signos import Signos
+from app.app_log import get_logger
+from app.settings import Config
+
+logger = get_logger(f"[{Config().APP_NAME}: Scrap Module]")
 
 class Horoscopo:
     def __init__(self, signo: Signos):
@@ -16,8 +21,9 @@ class Horoscopo:
         try:        
             response = requests.get(url)
             response.raise_for_status()  # Esto lanza una excepción si hay error
+            logger.debug(f"Página obtenida correctamente: {url}")
         except requests.RequestException as e:
-            print(f"Error al obtener la página: {e}")
+            logger.error(f"Error al obtener la página: {e}")
             return None
 
         return BeautifulSoup(response.text, "html.parser")
@@ -29,9 +35,10 @@ class Horoscopo:
             description = self.soup.find("div", {"class": "description"})
             # Convierte la descripción a texto
             text = description.text.strip()
+            logger.debug(f"Descripción del signo {self.signo}: {text}")
             return text
         except AttributeError:
-            print("Error al obtener la descripción del signo.")
+            logger.error("Error al obtener la descripción del signo.")
             return "Descripción no disponible."
 
     def _get_sign_prediction(self) -> Optional[str]:
@@ -46,9 +53,10 @@ class Horoscopo:
             second_prediction_block = prediction_blocks[1]
             specific_div = second_prediction_block.find("div", {"style": "padding-bottom: 1em;"})
             prediction = specific_div.text.strip()
+            logger.debug(f"Predicción del signo {self.signo}: {prediction}")
             return prediction
         except (AttributeError, IndexError):
-            print("Error al obtener la predicción del signo.")
+            logger.error("Error al obtener la predicción del signo.")
             return None
 
     def to_ditc(self):
@@ -57,8 +65,5 @@ class Horoscopo:
             "prediccion": self.prediction,
             "descripcion": self.description
         }
+        logger.debug(f"Devolviendo resultado en formato diccionario: {result}")
         return result
-
-if __name__ == "__main__":
-    prediccion = Horoscopo(Signos.ARIES.signo())
-    print(prediccion.prediction)
