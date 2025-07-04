@@ -132,9 +132,4 @@ Cuando envías un comando de signo zodiacal, el bot te devolverá un mensaje de 
 
 🏁 *¡Espero que disfrutes usando HoróscopoBot!* 
 
-> ¡Que los astros te sean favorables!
-
-
-## 📄 Licencia
-
-MIT © [Anjivervas](https://github.com/anjivervas/Horoscopo)[text](../OneDrive/Documentos/uni/proyecto_app/README.md)
+***¡Que los astros te sean favorables!**
